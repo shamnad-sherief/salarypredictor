@@ -70,3 +70,55 @@ Running with flask
 ```
 
  Go to ```  http://127.0.0.1:5000 ``` in your browser  after successfull completion
+ 
+ ## Deployment
+ 
+ Clone the repo:
+
+```bash
+git clone https://github.com/shamnad-sherief/salarypredictor.git
+```
+ Install Heroku-CLI and login
+ ```bash
+heroku login
+```
+Navigate to the project folder   
+```bash
+cd salarypredictor
+```
+Git should be initialized in the working directory:
+```bash
+git init
+```
+Create you app-name (salarypredictor)
+```bash
+heroku create salarypredictor
+```
+Adding Heroku remote 
+```bash
+heroku git:remote -a salarypredictor
+```
+Install dependencies
+```bash
+ pip install -r requirements.txt 
+```
+Make sure gunicorn is installed with requirements
+
+Commiting changes
+```bash
+git add .
+git commit -m 'your message'
+git push heroku main
+```
+Checking the status of your deployement
+```bash
+heroku ps:scale web=1
+```
+To open your website
+```bash
+Heroku open
+```
+Follow the link and chao
+
+
+
